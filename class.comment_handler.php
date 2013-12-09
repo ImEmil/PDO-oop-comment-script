@@ -19,5 +19,18 @@ class C_Handler {
     
     return $exc->fetchAll();
   }
+  
+  public function c_form($form) {
+   
+    if(isset($_POST["{$form}"])) {
+      return true;
+    }
+    
+    else {
+      return false;
+    }
+    
+  }
+    
     
  }
