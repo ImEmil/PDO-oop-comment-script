@@ -10,7 +10,14 @@ class C_Handler {
   public function insertComment($username, $email, $comment) {
     $values = array( $username, $email, $comment );
     $exc = $this->s->prepare("INSERT INTO `comments` (`username`, `email`, `comment`, `timestamp`) VALUES (?, ?, ?, NOW()")->execute($values);
+   
     return true;
-    }
+  }
+    
+  public function displayComments() {
+    $exc = $this->s->prepare("SELECT * FROM `comments` ORDER BY `timestamp` DESC")->execute();
+    
+    return $exc->fetchAll();
+  }
     
  }
