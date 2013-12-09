@@ -31,6 +31,18 @@ class C_Handler {
     }
     
   }
+  
+  public function c_null($string) {
+    
+    if(trim(is_null($string))) {
+      return true;
+    }
+    
+    else {
+      return false;
+    }
+    
+  }
     
     
  }
