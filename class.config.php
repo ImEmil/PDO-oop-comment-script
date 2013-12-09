@@ -11,4 +11,3 @@
     echo 'Couldn't connect to database > error -> ' . $e->getMessage();
     
   }
-?>
