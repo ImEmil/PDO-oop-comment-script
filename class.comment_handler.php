@@ -28,21 +28,12 @@ class C_Handler {
   }
   
   public function c_form($form) {
-     
-     isset($_POST["{$form}"]) ? true : false; 
+    return(isset($_POST["{$form}"]) ? true : false);                                                
   }
   
   public function c_null($string) {
-    
-    if(trim(is_null($string))) {
-      return true;
-    }
-    
-    else {
-      return false;
-    }
-    
+    return(trim(is_null($string)) ? true : false);   
   }
     
     
- }
+}
