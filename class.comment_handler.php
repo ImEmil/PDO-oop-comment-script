@@ -29,10 +29,6 @@ class C_Handler {
     return(isset($_POST["{$form}"]) ? true : false);                                                
   }
   
-  public function c_null($string) {
-    return(trim(is_null($string)) ? true : false);   
-  }
-  
   public function __destruct() {
     $this->s = null;
   }
