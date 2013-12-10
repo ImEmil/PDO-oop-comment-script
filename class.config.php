@@ -8,11 +8,11 @@
 */
 
   define("username", "root");
-  define("password", "test123");
+  define("password", "test12321");
 
   try {
-  	$s = new PDO('mysql:host=yourHOSThere;dbname=yourDBnameHERE', username, password);
-  	array(PDO::ATTR_EMULATE_PREPARES => false, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
+    $c = array(PDO::ATTR_EMULATE_PREPARES => false, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
+    $s = new PDO('mysql:host=localhost;dbname=test', username, password, $c);
     
     } catch (PDOException $e) {
     
