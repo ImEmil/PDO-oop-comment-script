@@ -12,7 +12,7 @@
 
   try {
     $c = array(PDO::ATTR_EMULATE_PREPARES => false, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
-    $s = new PDO('mysql:host=localhost;dbname=test', username, password, $c);
+    $s = new PDO('mysql:host=YOURHOST;dbname=YOURDATABASE', username, password, $c);
     
     } catch (PDOException $e) {
     
