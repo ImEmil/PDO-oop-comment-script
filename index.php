@@ -33,13 +33,14 @@
   
   <!-- I'll be adding some more code later -->
   <section>
+  
     <h3>Leave a comment! (54 comments)</h3>
-    
     <div class="comment-body">
-      <div class="user-time">Emil Nilsson <i>5 minutes ago</i> </div>
-      <div class="text">This is just a test bro's!</div>
-    </div>
     
+      <div class="user-time">Emil Nilsson <time data-livestamp="2391032">5 minutes ago</time> </div>
+      <div class="text">This is just a test bro's!</div>
+      
+    </div>
   </section>
   
 </body>
