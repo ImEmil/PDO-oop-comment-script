@@ -32,7 +32,15 @@
   </main>
   
   <!-- I'll be adding some more code later -->
-  <section></section>
+  <section>
+    <h3>Leave a comment! (54 comments)</h3>
+    
+    <div class="comment-body">
+      <div class="user-time">Emil Nilsson <i>5 minutes ago</i> </div>
+      <div class="text">This is just a test bro's!</div>
+    </div>
+    
+  </section>
   
 </body>
 </html>
