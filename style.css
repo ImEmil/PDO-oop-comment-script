@@ -22,3 +22,10 @@ body {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block; // Fix for some stupid web browsers
 }
+section {
+  background:...;
+  -webkit-transition: all 0.4s linear;
+}
+section:hover {
+  opacity:0.7;
+}
