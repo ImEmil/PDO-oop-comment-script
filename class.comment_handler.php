@@ -14,21 +14,22 @@ class C_Handler {
     $this->s = $pdo;
   }
   
-  public function insertComment($username, $email, $comment) {
-    $values = array( $username, $email, $comment );
-    $exc = $this->s->prepare("INSERT INTO `comments` (`username`, `email`, `comment`, `timestamp`) VALUES (?, ?, ?, NOW()")->execute($values);
+  public function insertComment($username, $email, $comment, $time, $ip) {
+    $values = array( $username, $email, $comment, $time, $ip );
+    $exc = $this->s->prepare("INSERT INTO `comments` (`username`, `email`, `comment`, `tstamp`, `ip`) VALUES (?, ?, ?, ?, ?)")->execute($values);
     return true;
   }
     
   public function displayComments() {
-    $exc = $this->s->prepare("SELECT * FROM `comments` ORDER BY `timestamp` DESC")->execute();
+    $exc = $this->s->prepare("SELECT * FROM `comments` ORDER BY `tstamp` DESC");
+    $exc->execute();
     return $exc->fetchAll();
   }
   
   public function c_form($form) {
     return(isset($_POST["{$form}"]) ? true : false);                                                
   }
-  
+
   public function __destruct() {
     $this->s = null;
   }
